@@ -106,7 +106,7 @@ else
 	echo -e "\n${blueColour}[*] Starting installation of the tools...\n${endColour}"
 	sleep 0.5
 	mkdir ~/tools && cd ~/tools
-	sudo apt install -y ufw
+	sudo apt install -y ufw shutter
 
 	echo -e "\n${purpleColour}[*] Installing bspwm...\n${endColour}"
 	sleep 2

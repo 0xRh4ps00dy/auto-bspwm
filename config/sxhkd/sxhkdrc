@@ -154,7 +154,7 @@ ctrl + shift + m
 
 # ScreenShots
 @Print
-	flameshot full
+	shutter -f
 
 ctrl + @Print
-	flameshot gui
+	shutter -s
