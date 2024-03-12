@@ -167,7 +167,7 @@ alias catnl='/usr/bin/batcat --paging=never'
 
 # Functions
 function mkt(){
-	mkdir {nmap,content,exploits,scripts}
+	mkdir {scans,content,exploits}
 }
 
 # Extract nmap information
@@ -220,3 +220,50 @@ function rmk(){
 	scrub -p dod $1
 	shred -zun 10 -v $1
 }
+
+# some more ls aliases
+alias ll='/usr/bin/lsd -lh --group-dirs=first'
+alias la='/usr/bin/lsd -a --group-dirs=first'
+alias l='/usr/bin/lsd --group-dirs=first'
+alias lla='/usr/bin/lsd -lha --group-dirs=first'
+alias ls='/usr/bin/lsd --group-dirs=first'
+alias cat='/usr/bin/batcat'
+alias catn='/usr/bin/cat'
+alias catnl='/usr/bin/batcat --paging=never'
+
+alias tools='cd $HOME/Tools'
+alias privesc='cd $HOME/Tools/Privesc'
+alias pivoting='cd $HOME/Tools/Pivoting'
+alias home='cd $HOME'
+alias downloads='cd $HOME/Downloads'
+alias desktop='cd $HOME/Desktop'
+alias pyserver='python3 -m http.server 80'
+alias tcpscan='nmap -p- --min-rate 10000 -Pn -n -oG scans/allTCPPorts $target'
+alias udpscan='sudo nmap -sU --top-ports 1000 --min-rate 10000 -Pn -n -oG scans/top100UDPPorts $target'
+
+#wordlist
+rockyou=/usr/share/wordlists/rockyou.txt
+extensions=/usr/share/wordlists/seclists/Discovery/Web-Content/web-extensions.txt
+names=/usr/share/wordlists/seclists/Usernames/top-usernames-shortlist.txt
+
+directorySmall=/usr/share/wordlists/seclists/Discovery/Web-Content/directory-list-2.3-small.txt
+directoryMedium=/usr/share/wordlists/seclists/Discovery/Web-Content/directory-list-2.3-medium.txt
+subdomainsLarge=/usr/share/wordlists/seclists/Discovery/DNS/subdomains-top1million-110000.txt
+subdomainsMedium=/usr/share/wordlists/seclists/Discovery/DNS/subdomains-top1million-20000.txt
+injections=/usr/share/wordlists/wfuzz/Injections/All_attack.txt
+
+#--------------- UFW --------------------------|
+
+alias ufwon='sudo ufw enable' # Habilita el FW
+alias ufwoff='sudo ufw disable' # Deshabilita el FW
+alias ufwst='sudo ufw status numbered' # Ves reglas puestas
+alias ufwallow='sudo ufw allow from' # Aceptas una ip desde <maquina>
+alias ufwdeny='sudo ufw deny from' # Negas conexion de una ip especi>
+alias ufwdel='sudo ufw delete' #  Eliminas una regla puesta (con el >
+alias ufwport='sudo ufw allow' # Aceptas conexion a un puerto
+alias ufwnoport='sudo ufw deny' # Negas conex a un puerto
+alias ufwverbose='sudo ufw status verbose'
+
+if [ -f $HOME/.ctf_vars ]; then
+    . $HOME/.ctf_vars
+fi
