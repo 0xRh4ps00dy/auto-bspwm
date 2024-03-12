@@ -100,7 +100,7 @@ echo ""
 
 # Create folders
 
-if [ -d $HOME/Desktop//Desktop/$boxName ]; then
+if [ -d $HOME/Desktop/$boxName ]; then
   echo -e "${RED}Directory exists${NC}"
   echo ""
 else
