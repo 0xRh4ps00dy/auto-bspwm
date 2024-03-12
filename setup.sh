@@ -247,8 +247,8 @@ else
 	sleep 2
 	sudo cp -v $dir/scripts/whichSystem.py /usr/local/bin/
 	cp -rv $dir/scripts/*.sh ~/.config/polybar/shapes/scripts/
-	sudo cp $dir/scripts/target /usr/bin/
-	sudp cp $dir/scripts/settarget /usr/bin/
+	sudo cp -v $dir/scripts/target /usr/bin/target
+	sudp cp -v $dir/scripts/settarget /usr/bin/settarget
 	sudo chmod +x /usr/bin/target
 	sudo chmod +x /usr/bin/settarget
 	touch ~/.config/target
