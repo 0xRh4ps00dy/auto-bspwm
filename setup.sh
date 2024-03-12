@@ -106,6 +106,7 @@ else
 	echo -e "\n${blueColour}[*] Starting installation of the tools...\n${endColour}"
 	sleep 0.5
 	mkdir ~/tools && cd ~/tools
+	sudo apt install -y ufw
 
 	echo -e "\n${purpleColour}[*] Installing bspwm...\n${endColour}"
 	sleep 2
@@ -246,10 +247,12 @@ else
 	sleep 2
 	sudo cp -v $dir/scripts/whichSystem.py /usr/local/bin/
 	cp -rv $dir/scripts/*.sh ~/.config/polybar/shapes/scripts/
-	sudo cp $dir/target /usr/bin/
+	sudo cp $dir/scripts/target /usr/bin/
+	sudp cp $dir/scripts/settarget /usr/bin
 	sudo chmod +x /usr/bin/target
+	sudo chmod +x /usr/bin/settarget
 	touch ~/.config/target
-	touch .ctf_vars
+	touch ~/.ctf_vars
 	touch ~/.config/polybar/shapes/scripts/target
 	echo -e "\n${greenColour}[+] Done\n${endColour}"
 	sleep 1.5
