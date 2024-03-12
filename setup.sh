@@ -246,6 +246,10 @@ else
 	sleep 2
 	sudo cp -v $dir/scripts/whichSystem.py /usr/local/bin/
 	cp -rv $dir/scripts/*.sh ~/.config/polybar/shapes/scripts/
+	sudo cp $dir/target /usr/bin/
+	sudo chmod +x /usr/bin/target
+	touch ~/.config/target
+	touch .ctf_vars
 	touch ~/.config/polybar/shapes/scripts/target
 	echo -e "\n${greenColour}[+] Done\n${endColour}"
 	sleep 1.5

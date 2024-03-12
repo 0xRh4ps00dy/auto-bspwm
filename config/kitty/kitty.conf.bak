@@ -49,6 +49,6 @@ shell zsh
 
 
 # BEGIN_KITTY_THEME
-# 1984 Dark
+# Tropical Neon
 include current-theme.conf
 # END_KITTY_THEME

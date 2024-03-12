@@ -126,11 +126,15 @@ alt + super + {Left,Down,Up,Right}
 
 # Open Firefox
 super + shift + f
-	/usr/bin/firejail /usr/bin/firefox
+	/usr/bin/firefox
 
 # Open Burpsuite
 super + shift + b
 	/usr/bin/burpsuite
+
+# Open Obsidian
+super + shift + o
+        /usr/bin/obsidian
 
 # Screen Lock
 ctrl + alt + l
