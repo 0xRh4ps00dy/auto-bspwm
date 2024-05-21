@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cd $HOME/Repositories/auto-bspwm/
+
 cp /usr/bin/backup $HOME/Repositories/auto-bspwm/scripts/
 cp /usr/bin/target $HOME/Repositories/auto-bspwm/scripts/
 cp -r $HOME/.config/bspwm $HOME/Repositories/auto-bspwm/config/bspwm
