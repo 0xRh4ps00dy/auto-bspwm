@@ -152,8 +152,9 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
 # History configurations
 HISTFILE=~/.zsh_history
-HISTSIZE=1000
-SAVEHIST=2000
+HISTSIZE=1000000000
+SAVEHIST=1000000000
+setopt EXTENDED_HISTORY
 
 # Manual aliases
 alias ll='/usr/bin/lsd -lh --group-dirs=first'
@@ -267,3 +268,6 @@ alias ufwverbose='sudo ufw status verbose'
 if [ -f $HOME/.ctf_vars ]; then
     . $HOME/.ctf_vars
 fi
+
+# Created by `pipx` on 2024-03-27 19:48:18
+export PATH="$PATH:/home/rh4ps00dy/.local/bin"

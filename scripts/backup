@@ -1,0 +1,11 @@
+#!/bin/bash
+
+cp /usr/bin/backup $HOME/Repositories/auto-bspwm/scripts/
+cp /usr/bin/target $HOME/Repositories/auto-bspwm/scripts/
+cp -r $HOME/.config/bspwm $HOME/Repositories/auto-bspwm/config/bspwm
+cp -r $HOME/.config/kitty $HOME/Repositories/auto-bspwm/config/kitty
+cp -r $HOME/.config/picom $HOME/Repositories/auto-bspwm/config/picom
+cp -r $HOME/.config/polybar $HOME/Repositories/auto-bspwm/config/polybar
+cp -r $HOME/.config/sxhkd $HOME/Repositories/auto-bspwm/config/sxhkd
+cp $HOME/.p10k.zsh $HOME/Repositories/auto-bspwm/.p10k.zsh
+cp $HOME/.zshrc $HOME/Repositories/auto-bspwm/.zshrc

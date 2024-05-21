@@ -248,8 +248,10 @@ else
 	sudo cp -v $dir/scripts/whichSystem.py /usr/local/bin/
 	cp -rv $dir/scripts/*.sh ~/.config/polybar/shapes/scripts/
 	sudo cp -v $dir/scripts/target /usr/bin/target
+	sudo cp -v $dir/scripts/backup /usr/bin/backup
 	sudo cp -v $dir/scripts/settarget /usr/bin/settarget
 	sudo chmod +x /usr/bin/target
+	sudo chmod +x /usr/bin/backup
 	sudo chmod +x /usr/bin/settarget
 	touch ~/.config/target
 	touch ~/.ctf_vars

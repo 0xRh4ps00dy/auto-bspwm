@@ -108,6 +108,7 @@ else
   mkdir $HOME/Desktop/$boxName/content
   mkdir $HOME/Desktop/$boxName/exploits
   mkdir $HOME/Desktop/$boxName/scans
+  touch $HOME/Desktop/$boxName/$boxName-Notes.txt
   echo -e "${RED}Directory created${NC}"
   echo ""
 fi
