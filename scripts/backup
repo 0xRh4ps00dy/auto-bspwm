@@ -9,3 +9,8 @@ cp -r $HOME/.config/polybar $HOME/Repositories/auto-bspwm/config/polybar
 cp -r $HOME/.config/sxhkd $HOME/Repositories/auto-bspwm/config/sxhkd
 cp $HOME/.p10k.zsh $HOME/Repositories/auto-bspwm/.p10k.zsh
 cp $HOME/.zshrc $HOME/Repositories/auto-bspwm/.zshrc
+
+git status
+git add .
+git commit -m "Update"
+git push origin main
