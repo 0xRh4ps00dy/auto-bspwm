@@ -233,12 +233,10 @@ alias catn='/usr/bin/cat'
 alias catnl='/usr/bin/batcat --paging=never'
 
 alias tools='cd $HOME/Tools'
-alias privesc='cd $HOME/Tools/Privesc'
-alias pivoting='cd $HOME/Tools/Pivoting'
 alias home='cd $HOME'
 alias downloads='cd $HOME/Downloads'
 alias desktop='cd $HOME/Desktop'
-alias pyserver='python3 -m http.server 80'
+alias www='python3 -m http.server 80'
 alias tcpscan='nmap -p- --min-rate 10000 -Pn -n -oG scans/allTCPPorts $target'
 alias udpscan='sudo nmap -sU --top-ports 1000 --min-rate 10000 -Pn -n -oG scans/top100UDPPorts $target'
 
@@ -269,5 +267,20 @@ if [ -f $HOME/.ctf_vars ]; then
     . $HOME/.ctf_vars
 fi
 
+# TTY upgrades
+py_tty_upgrade () {
+  echo "python -c 'import pty;pty.spawn(\"/bin/bash\")'"| xclip -sel clip
+}
+py3_tty_upgrade () {
+  echo "python3 -c 'import pty;pty.spawn(\"/bin/bash\")'"| xclip -sel clip
+}
+alias script_tty_upgrade="echo '/usr/bin/script -qc /bin/bash /dev/null'| xclip -sel clip"
+alias tty_fix="stty raw -echo; fg; reset"
+alias tty_conf="stty -a | sed 's/;//g' | head -n 1 | sed 's/.*baud /stty /g;s/line.*//g' | xclip -sel clip"
+
+
+
+
 # Created by `pipx` on 2024-03-27 19:48:18
 export PATH="$PATH:/home/rh4ps00dy/.local/bin"
+
