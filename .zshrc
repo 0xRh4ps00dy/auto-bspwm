@@ -232,7 +232,7 @@ alias cat='/usr/bin/batcat'
 alias catn='/usr/bin/cat'
 alias catnl='/usr/bin/batcat --paging=never'
 
-alias tools='cd $HOME/Tools'
+alias tools='cd $HOME/Tools;www'
 alias home='cd $HOME'
 alias downloads='cd $HOME/Downloads'
 alias desktop='cd $HOME/Desktop'
