@@ -232,13 +232,13 @@ alias cat='/usr/bin/batcat'
 alias catn='/usr/bin/cat'
 alias catnl='/usr/bin/batcat --paging=never'
 
-alias tools='cd $HOME/Tools;www'
+alias tools='cd $HOME/Tools;lla;www'
 alias home='cd $HOME'
 alias downloads='cd $HOME/Downloads'
 alias desktop='cd $HOME/Desktop'
 alias www='python3 -m http.server 80'
 alias tcpscan='nmap -p- --min-rate 10000 -Pn -n -oG scans/allTCPPorts $target'
-alias udpscan='sudo nmap -sU --top-ports 1000 --min-rate 10000 -Pn -n -oG scans/top100UDPPorts $target'
+alias udpscan='sudo nmap -sU --top-ports 10000 --min-rate 10000 -Pn -n -oG scans/top100UDPPorts $target'
 
 #wordlist
 rockyou=/usr/share/wordlists/rockyou.txt
