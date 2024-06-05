@@ -156,16 +156,6 @@ HISTSIZE=1000000000
 SAVEHIST=1000000000
 setopt EXTENDED_HISTORY
 
-# Manual aliases
-alias ll='/usr/bin/lsd -lh --group-dirs=first'
-alias la='/usr/bin/lsd -a --group-dirs=first'
-alias l='/usr/bin/lsd --group-dirs=first'
-alias lla='/usr/bin/lsd -lha --group-dirs=first'
-alias ls='/usr/bin/lsd --group-dirs=first'
-alias cat='/usr/bin/batcat'
-alias catn='/usr/bin/cat'
-alias catnl='/usr/bin/batcat --paging=never'
-
 # Functions
 function mkt(){
 	mkdir {scans,content,exploits}
@@ -226,13 +216,13 @@ function rmk(){
 alias ll='/usr/bin/lsd -lh --group-dirs=first'
 alias la='/usr/bin/lsd -a --group-dirs=first'
 alias l='/usr/bin/lsd --group-dirs=first'
-alias lla='/usr/bin/lsd -lha --group-dirs=first'
-alias ls='/usr/bin/lsd --group-dirs=first'
+alias ls='/usr/bin/lsd -lha --group-dirs=first'
+alias lla='/usr/bin/lsd --group-dirs=first'
 alias cat='/usr/bin/batcat'
 alias catn='/usr/bin/cat'
 alias catnl='/usr/bin/batcat --paging=never'
 
-alias tools='cd $HOME/Tools;lla;www'
+alias tools='cd $HOME/Tools;lla;python3 -m http.server 8080'
 alias home='cd $HOME'
 alias downloads='cd $HOME/Downloads'
 alias desktop='cd $HOME/Desktop'
